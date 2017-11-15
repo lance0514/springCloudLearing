@@ -18,6 +18,6 @@ public class HelloController {
     public String index() {
         ServiceInstance serviceInstance = client.getLocalServiceInstance();
         logger.info("/hello,host:" + serviceInstance.getHost() + ",server_id" + serviceInstance.getServiceId());
-        return "Hello world";
+        return "Hello world1111";
     }
 }
