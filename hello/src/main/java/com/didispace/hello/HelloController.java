@@ -1,5 +1,6 @@
 package com.didispace.hello;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -17,6 +18,7 @@ public class HelloController {
     @GetMapping("/hello")
     public String index() {
         ServiceInstance serviceInstance = client.getLocalServiceInstance();
+        System.out.print("122");
         logger.info("/hello,host:" + serviceInstance.getHost() + ",server_id" + serviceInstance.getServiceId());
         return "Hello world";
     }
